@@ -38,7 +38,7 @@ export class PostService {
       throw new Error('You cannot update this post');
     }
 
-    return this.postModel.findByIdAndUpdate(id, postDto, { new: true }).populate('author').exec();
+    return this.postModel.findByIdAndUpdate(id, postDto, { new: true }).exec();
   }
 
   async delete(id: string, currentUser: User): Promise<Post> {
@@ -51,6 +51,6 @@ export class PostService {
       throw new Error('You cannot delete this post');
     }
 
-    return this.postModel.findByIdAndDelete(id).populate('author').exec();
+    return this.postModel.findByIdAndDelete(id).exec();
   }
 }
