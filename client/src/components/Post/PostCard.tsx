@@ -12,7 +12,7 @@ export default function PostCard({ post, onDelete }: { post: Post; onDelete: (po
   const navigate = useNavigate();
 
   return (
-    <Card sx={{ width: '35%' }}>
+    <Card sx={{ width: '35%' }} id="post-card">
       <CardHeader
         title={post.author?.username}
         subheader={new Date(post.createdAt!).toLocaleString('uk-UA')}

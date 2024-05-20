@@ -50,6 +50,7 @@ export default function BlogsAppBar() {
             handleMenuClose();
             navigate(`/blogs/${user?.id}`);
           }}
+          id="user-blog"
         >
           <ListItemIcon>
             <BookIcon fontSize="small" />
