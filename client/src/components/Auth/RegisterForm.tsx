@@ -69,7 +69,7 @@ export default function SignUp() {
           Sign-Up
         </Typography>
         {validationErrors.length > 0 && (
-          <Box>
+          <Box id="reg-errors">
             {validationErrors.map((error, index) => (
               <Typography key={index} sx={{ color: 'red', fontSize: 14 }}>
                 • {error}

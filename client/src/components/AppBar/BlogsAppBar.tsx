@@ -28,7 +28,7 @@ export default function BlogsAppBar() {
   };
 
   return (
-    <AppBar>
+    <AppBar id="app">
       <Toolbar sx={{ bgcolor: 'indigo' }}>
         <IconButton
           size="medium"
