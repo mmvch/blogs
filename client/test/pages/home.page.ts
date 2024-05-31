@@ -10,6 +10,14 @@ class HomePage extends Page {
     return $('//*[@id="user-blog"]');
   }
 
+  get iconMenuProfile() {
+    return $('//*[@id="profile-menu-item"]');
+  }
+
+  get textAppName() {
+    return $('//*[@id="app"]');
+  }
+
   async open() {
     return super.open('');
   }

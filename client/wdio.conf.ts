@@ -30,7 +30,7 @@ export const config: Options.Testrunner = {
     // of the config file unless it's absolute.
     //
     specs: [
-        './test/specs/**/*.ts'
+        './test/feature/**/*.feature'
     ],
     // Patterns to exclude.
     exclude: [
@@ -117,7 +117,7 @@ export const config: Options.Testrunner = {
     //
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
-    framework: 'mocha',
+    framework: 'cucumber',
     
     //
     // The number of times to retry the entire specfile when it fails as a whole
@@ -136,11 +136,34 @@ export const config: Options.Testrunner = {
 
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
-    mochaOpts: {
-        ui: 'bdd',
-        timeout: 60000
-    },
 
+
+    cucumberOpts: {
+        // <string[]> (file/dir) require files before executing features
+        require: ['./e2e/step-definitions/*'],
+        // <boolean> show full backtrace for errors
+        backtrace: false,
+        // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
+        requireModule: [],
+        // <boolean> invoke formatters without executing steps
+        dryRun: false,
+        // <boolean> abort the run on first failure
+        failFast: false,
+        // <string[]> Only execute the scenarios with name matching the expression (repeatable).
+        name: [],
+        // <boolean> hide step definition snippets for pending steps
+        snippets: true,
+        // <boolean> hide source uris
+        source: true,
+        // <boolean> fail if there are any undefined or pending steps
+        strict: false,
+        // <string> (expression) only execute the features or scenarios with tags matching the expression
+        tagExpression: '',
+        // <number> timeout for step definitions
+        timeout: 60000,
+        // <boolean> Enable this config to treat undefined definitions as warnings.
+        ignoreUndefinedDefinitions: false
+    }
     //
     // =====
     // Hooks

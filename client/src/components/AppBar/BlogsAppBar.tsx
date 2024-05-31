@@ -74,6 +74,7 @@ export default function BlogsAppBar() {
             handleMenuClose();
             navigate('/profile');
           }}
+          id="profile-menu-item"
         >
           <ListItemIcon>
             <AssignmentIndIcon fontSize="small" />
